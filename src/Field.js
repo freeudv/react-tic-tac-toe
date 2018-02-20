@@ -28,7 +28,6 @@ export default class Field extends Component {
         <Cell
           key={id}
           className={notEmpty ? ` ${notEmpty.fill}` : ""}
-          //value={this.props.cells[id]}
           onClick={() => this.props.onClick(id)}
         />
       )

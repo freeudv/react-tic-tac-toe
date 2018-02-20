@@ -4,12 +4,15 @@ function ResultHeader({ winner, step, xTurn, onClick }) {
   let result = ""
 
   if (winner) {
-    if (winner === "ch") {
-      result = "Crosses won!"
-    } else if (winner === "ri") {
-      result = "Toes won!"
-    } else {
-      result = `It's a draw!`
+    switch (winner) {
+      case "ch":
+        result = "Crosses won!"
+        break
+      case "ri":
+        result = "Toes won!"
+        break
+      default:
+        result = "It's a draw!"
     }
   }
 

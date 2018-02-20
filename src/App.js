@@ -21,7 +21,6 @@ class App extends Component {
     const currentHistory = history.slice(0, current)
     const className = xTurn ? "ch" : "ri"
 
-    //    const notEmpty = history.find(item => item.cell === i)
     const notEmpty = currentHistory.map(({ cell }) => cell).includes(i)
 
     if (winner || notEmpty) {
@@ -111,8 +110,6 @@ class App extends Component {
   render() {
     const { winner, history, xTurn, current } = this.state
 
-    console.log("history", history)
-    console.log("current", history.slice(0, current))
     return (
       <Fragment>
         <ResultHeader
